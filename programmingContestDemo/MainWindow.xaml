@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="programmingContestDemo.MainWindow"
+        Title="ProgramingContestDemo" Height="600" Width="1250" Loaded="Window_Loaded">
+
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem x:Name="OpenDialogMenu" FontSize="18" Header="ファイルを開く" Click="textOpen_Click" />
+            <MenuItem Header="サイコロの状態をリセットする" FontSize="18" Click="diceClear_Click_1"/>
+        </Menu>
+        <StackPanel Width="1250" Margin="0,30,-8,0" HorizontalAlignment="Left" Orientation="Horizontal">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" >
+                <StackPanel x:Name="DiceLine" HorizontalAlignment="Left" Height="540" VerticalAlignment="Top" Width="1000"/>
+            </ScrollViewer>
+            <StackPanel Width="223.68">
+                <TextBlock Text="BinaryData" FontSize="18"/>
+                <TextBox x:Name="binaryData" HorizontalAlignment="Left" Height="251" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223.68" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" />
+                <CheckBox x:Name="BindingCheck" FontSize="18" Content="ManualMode" Margin="0,10,0,0" Checked="BindingCheck_Checked" Unchecked="BindingCheck_Unchecked"/>
+                <TextBox x:Name="BindingBox" Height="109" TextWrapping="Wrap" Text="Encorde_Text" IsEnabled="False" AllowDrop="False" InputMethod.IsInputMethodEnabled="False"/>
+                <Button x:Name="ttob" Content="Text to Binary" Width="112" IsEnabled="False" Click="ttob_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
